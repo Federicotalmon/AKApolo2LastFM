@@ -16,7 +16,7 @@ internal class JsonToArtistResolver: LastFMToArtistResolver {
     override fun getCardFromExternalData(dataResponse: String?): InfoCard? =
         try {
             dataResponse?.getFirstItem()?.let { item ->
-                InfoCard(item.getCardDescription(), item.getCardURL(), 1, "")
+                InfoCard(item.getCardDescription(), item.getCardURL(), CardSource.LASTFM, "")
             }
         } catch (e: Exception) {
             null
@@ -28,10 +28,10 @@ internal class JsonToArtistResolver: LastFMToArtistResolver {
     }
 
     private fun JsonObject.getCardDescription(): String {
-        val bio = this[ayds.apolo2.LastFM.BIO]?.asJsonObject
-        val content = bio?.get(ayds.apolo2.LastFM.CONTENT)?.asString
+        val bio = this[BIO]?.asJsonObject
+        val content = bio?.get(CONTENT)?.asString
         return content ?: ""
     }
 
-    private fun JsonObject.getCardURL(): String = this[ayds.apolo2.LastFM.URL]?.asString ?: ""
+    private fun JsonObject.getCardURL(): String = this[URL]?.asString ?: ""
 }
