@@ -1,5 +1,6 @@
 package ayds.apolo2.LastFM
 
+import ayds.apolo2.LastFM.entities.InfoArtist
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 
@@ -9,14 +10,14 @@ private const val BIO = "bio"
 private const val ARTIST = "artist"
 
 interface LastFMToArtistResolver {
-    fun getCardFromExternalData(dataResponse: String?): InfoCard?
+    fun getCardFromExternalData(dataResponse: String?): InfoArtist?
 }
 
 internal class JsonToArtistResolver: LastFMToArtistResolver {
-    override fun getCardFromExternalData(dataResponse: String?): InfoCard? =
+    override fun getCardFromExternalData(dataResponse: String?): InfoArtist? =
         try {
             dataResponse?.getFirstItem()?.let { item ->
-                InfoCard(item.getCardDescription(), item.getCardURL(), 1, "")
+                InfoArtist(item.getCardDescription(), item.getCardURL(), 1, "")
             }
         } catch (e: Exception) {
             null
