@@ -29,10 +29,10 @@ internal class JsonToArtistResolver: LastFMToArtistResolver {
     }
 
     private fun JsonObject.getCardDescription(): String {
-        val bio = this[ayds.apolo2.LastFM.BIO]?.asJsonObject
-        val content = bio?.get(ayds.apolo2.LastFM.CONTENT)?.asString
+        val bio = this[BIO]?.asJsonObject
+        val content = bio?.get(CONTENT)?.asString
         return content ?: ""
     }
 
-    private fun JsonObject.getCardURL(): String = this[ayds.apolo2.LastFM.URL]?.asString ?: ""
+    private fun JsonObject.getCardURL(): String = this[URL]?.asString ?: ""
 }
