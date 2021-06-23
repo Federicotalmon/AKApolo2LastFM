@@ -1,4 +1,4 @@
-package ayds.apolo2.lastFM.entities
+package ayds.apolo2.LastFM.entities
 
 data class InfoArtist(
     val description: String,

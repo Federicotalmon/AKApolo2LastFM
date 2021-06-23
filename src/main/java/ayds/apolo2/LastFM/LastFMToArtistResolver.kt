@@ -1,6 +1,6 @@
-package ayds.apolo2.lastFM
+package ayds.apolo2.LastFM
 
-import ayds.apolo2.lastFM.entities.InfoArtist
+import ayds.apolo2.LastFM.entities.InfoArtist
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 

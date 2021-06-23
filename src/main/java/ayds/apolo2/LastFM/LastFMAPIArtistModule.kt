@@ -1,4 +1,4 @@
-package ayds.apolo2.lastFM
+package ayds.apolo2.LastFM
 
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
