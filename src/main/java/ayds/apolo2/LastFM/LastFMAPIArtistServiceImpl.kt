@@ -1,6 +1,6 @@
 package ayds.apolo2.lastFM
 
-import ayds.apolo2.LastFM.entities.InfoArtist
+import ayds.apolo2.lastFM.entities.InfoArtist
 import retrofit2.Response
 
 internal class LastFMAPIArtistServiceImpl(
