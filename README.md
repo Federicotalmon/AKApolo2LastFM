@@ -2,6 +2,8 @@
 
 # LastFM.
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lastfm_logo.svg/320px-Lastfm_logo.svg.png)
+
 ## Descripción.
 Dicha librería provee información de un artista o una banda musical desde la fuente LastFM, la cual es una breve descripción de la misma.
 
@@ -12,4 +14,4 @@ La librería consta de un único método denominado getArtist, que recibe como p
 - Descripción.<br>
 - Link de la descripción.<br>
 - Fuente de la información.<br>
-- Link a logo.<br>
+- Logo.<br>
