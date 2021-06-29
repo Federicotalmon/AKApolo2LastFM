@@ -8,7 +8,6 @@ private const val CONTENT = "content"
 private const val URL = "url"
 private const val BIO = "bio"
 private const val ARTIST = "artist"
-private const val LASTFM_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Lastfm_logo.svg/320px-Lastfm_logo.svg.png"
 
 interface LastFMToArtistResolver {
     fun getCardFromExternalData(dataResponse: String?): InfoArtist?
@@ -18,7 +17,7 @@ internal class JsonToArtistResolver: LastFMToArtistResolver {
     override fun getCardFromExternalData(dataResponse: String?): InfoArtist? =
         try {
             dataResponse?.getFirstItem()?.let { item ->
-                InfoArtist(item.getCardDescription(), item.getCardURL(), 1, LASTFM_IMAGE)
+                InfoArtist(item.getCardDescription(), item.getCardURL(), 1)
             }
         } catch (e: Exception) {
             null
