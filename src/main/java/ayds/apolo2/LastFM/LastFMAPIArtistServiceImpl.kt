@@ -1,4 +1,4 @@
-package ayds.apolo2.LastFM
+package ayds.apolo2.LastFM.entities
 
 import ayds.apolo2.LastFM.entities.InfoArtist
 import retrofit2.Response
